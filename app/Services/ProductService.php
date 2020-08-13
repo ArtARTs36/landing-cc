@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Product;
+use Illuminate\Support\Collection;
 
 class ProductService
 {
@@ -17,5 +18,13 @@ class ProductService
         }
 
         return $products;
+    }
+
+    public function top(): Collection
+    {
+        return Product::query()
+            ->limit(3)
+            ->latest(Product::UPDATED_AT)
+            ->get();
     }
 }
