@@ -21,3 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('products')->group(function () {
     Route::post('set', 'ProductController@set');
 });
+
+Route::prefix('form')->group(function () {
+    Route::post('feedback', '\App\Email\Messages\FeedBack@send');
+});

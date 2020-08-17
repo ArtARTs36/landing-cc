@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * @property int $id
+ * @property string $name
+ */
 class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;

@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PageController@start');
+Route::get('/contacts', 'PageController@contacts');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

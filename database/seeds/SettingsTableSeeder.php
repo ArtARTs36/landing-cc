@@ -129,6 +129,63 @@ class SettingsTableSeeder extends Seeder
                 'group'        => 'Admin',
             ])->save();
         }
+
+        $this->createAppSettings();
+    }
+
+    private function createAppSettings(): void
+    {
+        $setting = $this->findSetting('site.link_linkedin');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Ссылка на Linkedin',
+                'value'        => 'https://www.linkedin.com/in/виктор-украинский-0553077a/',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => 1,
+                'group'        => 'Site',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('site.link_instagram');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Ссылка на Instagram',
+                'value'        => 'https://www.instagram.com/cvety.chernozemya/',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => 1,
+                'group'        => 'Site',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('site.link_youtube');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Ссылка на YouTube',
+                'value'        => 'https://www.youtube.com/channel/UCeLosPYr1ZagsGt5cswE3lA',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => 1,
+                'group'        => 'Site',
+            ])->save();
+        }
+
+        $setting = $this->findSetting('site.footer_text');
+        if (!$setting->exists) {
+            $setting->fill([
+                'display_name' => 'Текст в нижней части сайта (под логотипом)',
+                'value'        => '',
+                'details'      => '',
+                'type'         => 'text',
+                'order'        => 1,
+                'group'        => 'Site',
+            ])->save();
+        }
+
+        $this->createSiteSetting('Контакты: email', 'site.contacts_email', 'apivek@mail.ru');
+        $this->createSiteSetting('Контакты: телефон', 'site.contacts_phone', '+7 (920) 449 70-10');
+        $this->createSiteSetting('Контакты: местоположение', 'site.contacts_location', 'Воронежская область, Кантемировский район, с. Писаревка');
     }
 
     /**
@@ -141,5 +198,18 @@ class SettingsTableSeeder extends Seeder
     protected function findSetting($key)
     {
         return Setting::firstOrNew(['key' => $key]);
+    }
+
+    protected function createSiteSetting($name, $key, $value)
+    {
+        $setting = new Setting();
+        $setting->display_name = $name;
+        $setting->key = $key;
+        $setting->value = $value;
+        $setting->details = '';
+        $setting->type = 'text';
+        $setting->order = 1;
+        $setting->group = 'Site';
+        $setting->save();
     }
 }

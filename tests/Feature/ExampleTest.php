@@ -16,6 +16,8 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
+        dump(setting('site'));
+
         $response->assertStatus(200);
     }
 }

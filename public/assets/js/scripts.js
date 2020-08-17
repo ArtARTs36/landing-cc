@@ -20,7 +20,7 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ Navbar ( scrollIt ) ]
 -----------------------------------------------------------------*/
-    
+
     $.scrollIt({
       upKey: 38,                // key code to navigate to the next section
       downKey: 40,              // key code to navigate to the previous section
@@ -35,7 +35,7 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ Navbar ( Change Background & Logo ) ]
 -----------------------------------------------------------------*/
-    
+
     wind.on("scroll",function () {
 
         var bodyScroll = wind.scrollTop(),
@@ -45,12 +45,12 @@ $(function() {
         if(bodyScroll > 100){
 
             navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo-dark.png');
+            logo.attr('src', '/assets/img/logo-dark.png');
 
         }else{
 
             navbar.removeClass("nav-scroll");
-            logo.attr('src', 'img/logo-light.png');
+            logo.attr('src', '/assets/img/logo-light.png');
         }
     });
 
@@ -64,12 +64,12 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ Progress Bar ]
 -----------------------------------------------------------------*/
-    
+
     wind.on('scroll', function () {
         $(".skill-progress .progres").each(function () {
-            var bottom_of_object = 
+            var bottom_of_object =
             $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = 
+            var bottom_of_window =
             $(window).scrollTop() + $(window).height();
             var myVal = $(this).attr('data-value');
             if(bottom_of_window > bottom_of_object) {
@@ -84,10 +84,10 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ Sections Background Image From Data ]
 -----------------------------------------------------------------*/
-    
+
     var pageSection = $(".bg-img, section");
     pageSection.each(function(indx){
-        
+
         if ($(this).attr("data-background")){
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
@@ -129,7 +129,7 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ magnificPopup ]
 -----------------------------------------------------------------*/
-    
+
     $('.gallery').magnificPopup({
         delegate: '.popimg',
         type: 'image',
@@ -138,10 +138,10 @@ $(function() {
         }
     });
 
-    
+
 /* ----------------------------------------------------------------
                 [ YouTubePopUp ]
------------------------------------------------------------------*/    
+-----------------------------------------------------------------*/
 
     $("a.vid").YouTubePopUp();
 
@@ -149,7 +149,7 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ countUp ]
 -----------------------------------------------------------------*/
-    
+
     $('.numbers .count').countUp({
         delay: 10,
         time: 1500
@@ -170,7 +170,7 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ accordion ]
 -----------------------------------------------------------------*/
-    
+
     $(".accordion").on("click",".title", function () {
 
         $(this).next().slideDown();
@@ -204,7 +204,7 @@ $(window).on("load",function (){
 
 /* ----------------------------------------------------------------
                 [ Preloader ]
------------------------------------------------------------------*/    
+-----------------------------------------------------------------*/
 
     $(".loading").fadeOut(500);
 
@@ -213,7 +213,7 @@ $(window).on("load",function (){
 /* ----------------------------------------------------------------
                 [ isotope Portfolio ( Masonery Style ) ]
 -----------------------------------------------------------------*/
-    
+
     $('.gallery').isotope({
       // options
       itemSelector: '.items'
@@ -242,7 +242,7 @@ $(window).on("load",function (){
 /* ----------------------------------------------------------------
                 [ contact form validator ]
 -----------------------------------------------------------------*/
-    
+
     $('#contact-form').validator();
 
     $('#contact-form').on('submit', function (e) {
