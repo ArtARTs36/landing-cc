@@ -19,7 +19,7 @@
                             </div>
                             <div class="value">
                                 <img src="" width="250" height="250">
-                                <p><span>₽</span>{{ $product->price }}</p>
+                                <p style="font-size:14pt"><span>₽</span>{{ $product->price }}</p>
                             </div>
                             <div class="feat">
                                 <ul>
