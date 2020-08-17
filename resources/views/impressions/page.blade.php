@@ -36,6 +36,22 @@
                         @endforeach
                     </div>
                 </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="page-contact section-padding" style="background: #eee">
+        <div class="container">
+            <div class="row">
+
+                <div class="section-head text-center col-sm-12">
+                    <h4>Вы можете оставить свой отзыв</h4>
+                </div>
+
+                <div class="offset-lg-1 col-lg-10">
+                    @include('impressions.form')
+                </div>
             </div>
         </div>
     </section>

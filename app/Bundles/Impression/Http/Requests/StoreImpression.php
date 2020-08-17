@@ -23,9 +23,9 @@ final class StoreImpression extends AuthorizedRequest
     {
         return [
             static::FIELD_AUTHOR_FULL_NAME => 'required|string',
-            static::FIELD_AUTHOR_EMAIL => 'required|string',
+            static::FIELD_AUTHOR_EMAIL => 'required|email',
             static::FIELD_MESSAGE => 'required|string',
-            static::FIELD_AUTHOR_POSITION => 'required|string',
+            static::FIELD_AUTHOR_POSITION => 'sometimes|string',
         ];
     }
 

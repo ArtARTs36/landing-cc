@@ -18,7 +18,7 @@ class Author
     {
         $this->name = $data[StoreImpression::FIELD_AUTHOR_FULL_NAME];
         $this->email = $data[StoreImpression::FIELD_AUTHOR_EMAIL];
-        $this->position = $data[StoreImpression::FIELD_AUTHOR_POSITION];
+        $this->position = $data[StoreImpression::FIELD_AUTHOR_POSITION] ?? "Потребитель";
         $this->ip = $data['author_ip'];
     }
 
