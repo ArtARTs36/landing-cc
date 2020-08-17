@@ -244,4 +244,8 @@ return [
            ],
        ]*/
     ],
+
+    'settings' => [
+        'cache' => (bool) env('VOYAGER_SETTINGS_CACHE'),
+    ],
 ];

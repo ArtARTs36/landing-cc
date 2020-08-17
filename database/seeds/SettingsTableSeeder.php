@@ -183,6 +183,8 @@ class SettingsTableSeeder extends Seeder
             ])->save();
         }
 
+        $this->createSiteSetting('Ссылка на OZON', 'site.link_ozon', 'https://ozon.ru/');
+
         $this->createSiteSetting('Контакты: email', 'site.contacts_email', 'apivek@mail.ru');
         $this->createSiteSetting('Контакты: телефон', 'site.contacts_phone', '+7 (920) 449 70-10');
         $this->createSiteSetting('Контакты: местоположение', 'site.contacts_location', 'Воронежская область, Кантемировский район, с. Писаревка');
