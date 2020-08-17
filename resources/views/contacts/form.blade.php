@@ -12,7 +12,7 @@
                     <input id="feedback-authorName"
                            type="text"
                            name="name"
-                           placeholder="Как к Вам обращаться?"
+                           placeholder="Как к Вам обращаться? *"
                            required="required"
                            data-error="Обязательное поле"
                     >
@@ -26,8 +26,7 @@
                            type="email"
                            name="email"
                            placeholder="Адрес электронной почты"
-                           required="required"
-                           data-error="Обязательное поле">
+                    >
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
@@ -40,12 +39,18 @@
 
             <div class="col-md-12">
                 <div class="form-group">
+                    <input id="feedback-authorPhone" type="text" name="phone" placeholder="Номер телефона *">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
                         <textarea id="feedback-message"
                                   name="message"
-                                  placeholder="Your Message *"
+                                  placeholder="Сообщение *"
                                   rows="4"
                                   required="required"
-                                  data-error="Your message is required."
+                                  data-error="Обязательное поле"
                         ></textarea>
                     <div class="help-block with-errors"></div>
                 </div>

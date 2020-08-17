@@ -8,6 +8,7 @@ function sendMessage(root)
         data: {
             'author_full_name': val('feedback-authorName'),
             'author_email': val('feedback-authorEmail'),
+            'author_phone': val('feedback-authorPhone'),
             'subject': val('feedback-subject'),
             'message': val('feedback-message'),
         },
@@ -41,6 +42,8 @@ function getErrorText(key)
             return 'Укажите Ваше имя';
         case "author_email":
             return 'Вы не правильно указали адрес электронной почты';
+        case "author_phone":
+            return 'Вы не правильно указали номер телефона';
         case "subject":
             return 'Вы не правильно указали тему обращения';
         case "message":

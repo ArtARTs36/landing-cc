@@ -19,7 +19,7 @@ Route::prefix('products')->group(function () {
 });
 
 Route::prefix('form')->group(function () {
-    Route::post('feedback', '\App\Email\Messages\FeedBack@send');
+    Route::post('feedback', 'FeedBackController@store');
 });
 
 Route::prefix('events')->group(function () {
