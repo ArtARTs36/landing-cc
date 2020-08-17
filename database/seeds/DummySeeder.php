@@ -12,6 +12,10 @@ final class DummySeeder extends Seeder
     public function run(): void
     {
         $this->gallery();
+
+        $this->call(ImpressionSeeder::class);
+        $this->call(ProductSeeder::class);
+        $this->call(ExternalAboutUsPostSeeder::class);
     }
 
     private function gallery(): void
