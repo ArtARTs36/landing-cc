@@ -33,8 +33,8 @@
             <div class="col-lg-4 col-md-5">
                 <div class="item">
                     <h6>Обновления продукции</h6>
-                    <form>
-                        <input id="subscribe_email" type="email" name="email" placeholder="Электронная почта">
+                    <form onsubmit="subscribeOnProductUpdateViaForm();return false;">
+                        <input id="product_update_subscribe_email" type="email" name="email" placeholder="Электронная почта">
                         <button class="butn butn-bg">
                             <span>Подписаться <i class="pe-7s-paper-plane"></i></span>
                         </button>

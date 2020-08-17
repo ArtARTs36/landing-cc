@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style-blue.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/modal.css') }}" />
 </head>
 
 <body>

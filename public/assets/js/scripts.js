@@ -237,36 +237,35 @@ $(window).on("load",function (){
         $(this).addClass('active').siblings().removeClass('active');
 
     });
-
-
-/* ----------------------------------------------------------------
-                [ contact form validator ]
------------------------------------------------------------------*/
-
-    $('#contact-form').validator();
-
-    $('#contact-form').on('submit', function (e) {
-        if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
-
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
-
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
-        }
-    });
-
 });
+
+function subscribeOnProductUpdateViaForm()
+{
+    return subscribeOnProductUpdate($('#product_update_subscribe_email').val());
+}
+
+function subscribeOnProductUpdate(email)
+{
+    $.ajax({
+        type: "POST",
+        url: '/api/events/subscribe',
+        data: {
+            'email': email,
+            'event_key': 'product_update'
+        },
+        success: function () {
+            $('<div id="subscribe-on-product-update-success" class="modal">\n' +
+                '<h5>Подписка на обновления продукции</h5> <br/>\n' +
+                '<div class="alert alert-success" role="alert" style="">\n' +
+                'Подписка успешно оформлена\n' +
+                '</div>').appendTo('body').modal();
+        },
+        error: function (response) {
+            $('<div id="subscribe-on-product-update-error" class="modal">\n' +
+                '<h5>Подписка на обновления продукции</h5> <br/>\n' +
+                '<div class="alert alert-danger" role="alert" style="">\n' +
+                'Проверьте указанный адрес электронной почты\n' +
+                '</div>').appendTo('body').modal();
+        },
+    });
+}

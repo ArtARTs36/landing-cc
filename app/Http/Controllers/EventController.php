@@ -18,7 +18,11 @@ class EventController extends Controller
      */
     public function subscribe(SubscribeRequest $request): Subscribe
     {
-        return Event::findByName($request->get(SubscribeRequest::FIELD_EVENT_NAME))
-            ->subscribe($request->get(SubscribeRequest::FIELD_EMAIL));
+        $event = Event::findByKey($request->get(SubscribeRequest::FIELD_EVENT_KEY));
+        if ($event === null) {
+            abort(422);
+        }
+
+        return $event->subscribe($request->get(SubscribeRequest::FIELD_EMAIL));
     }
 }

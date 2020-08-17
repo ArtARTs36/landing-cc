@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style-blue.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/modal.css') }}" />
 </head>
 
 <body>
@@ -23,7 +24,7 @@
 @include('layouts/navbar')
 
 <header class="header" data-scroll-index="0">
-    <div class="background valign bg-img parallaxie" data-overlay-dark="9" data-background="{{ asset('img/bg1.jpg') }}">
+    <div class="background valign bg-img parallaxie" data-overlay-dark="9">
         <div class="container">
             <div class="row">
                 <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 text-center caption mt-80">
@@ -217,7 +218,7 @@
 @include('start_page.impressions')
 
 <div class="call-action text-center">
-    <div class="background bg-img  parallaxie pt-80 pb-80" data-background="img/bg2.jpg" data-overlay-dark="8">
+    <div class="background bg-img  parallaxie pt-80 pb-80" data-background="{{ asset('img/bg2.jpg') }}" data-overlay-dark="8">
         <div class="container">
             <div class="row">
                 <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
@@ -281,6 +282,7 @@
 <script src="{{ asset('js/map.js') }}"></script>
 <script src="{{ asset('js/validator.js') }}"></script>
 <script src="{{ asset('js/scripts.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
 </body>
 

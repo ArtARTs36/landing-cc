@@ -1,4 +1,4 @@
- <form class="form" id="contact-form" method="post">
+ <form class="form" id="contact-form" method="post" onsubmit="return false;">
     <div class="messages">
 
     </div>
@@ -25,7 +25,7 @@
                     <input id="feedback-authorEmail"
                            type="email"
                            name="email"
-                           placeholder="Email *"
+                           placeholder="Адрес электронной почты"
                            required="required"
                            data-error="Обязательное поле">
                     <div class="help-block with-errors"></div>
@@ -34,7 +34,7 @@
 
             <div class="col-md-12">
                 <div class="form-group">
-                    <input id="feedback-subject" type="text" name="subject" placeholder="Subject">
+                    <input id="feedback-subject" type="text" name="subject" placeholder="Тема">
                 </div>
             </div>
 
@@ -61,8 +61,6 @@
         </div>
     </div>
 </form>
-
-<link rel="stylesheet" href="{{ asset('css/modal.css') }}" />
 
 @section('scripts')
     <script src="{{ asset('/js/form/feedback.js') }}"></script>

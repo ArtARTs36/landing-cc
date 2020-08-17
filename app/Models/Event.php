@@ -37,6 +37,11 @@ class Event extends Model
         return $this->hasMany(Subscribe::class);
     }
 
+    public static function findByKey(string $key): ?Event
+    {
+        return static::query()->where(static::FIELD_KEY, $key)->first();
+    }
+
     /**
      * @param string $name
      * @return Event|null

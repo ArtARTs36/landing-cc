@@ -11,7 +11,7 @@ use App\Models\Subscribe;
 class SubscribeRequest extends AuthorizedRequest
 {
     public const FIELD_EMAIL = Subscribe::FIELD_EMAIL;
-    public const FIELD_EVENT_NAME = 'event_name';
+    public const FIELD_EVENT_KEY = 'event_key';
 
     /**
      * @return array
@@ -20,7 +20,7 @@ class SubscribeRequest extends AuthorizedRequest
     {
         return [
             static::FIELD_EMAIL => 'required|email',
-            static::FIELD_EVENT_NAME => 'required|string',
+            static::FIELD_EVENT_KEY => 'required|string',
         ];
     }
 }

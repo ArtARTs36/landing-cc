@@ -21,7 +21,7 @@ class EventTest extends TestCase
 
         $response = $this->postJson('/api/events/subscribe', [
             SubscribeRequest::FIELD_EMAIL => 'my@mail.ru',
-            SubscribeRequest::FIELD_EVENT_NAME => $subscribe->name,
+            SubscribeRequest::FIELD_EVENT_KEY => $subscribe->name,
         ])->assertCreated()->decodeResponseJson();
 
         self::assertArrayHasKey('id', $response);
