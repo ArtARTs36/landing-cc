@@ -42,89 +42,9 @@
     </div>
 </header>
 
-<section class="about section-padding pt-0" data-scroll-index="1">
-    <div class="container top">
-        <div class="row">
-
-            <div class="col-lg-4 item">
-                <div class="text-center">
-                    <span class="icon pe-7s-diamond"></span>
-                    <h6>Современное оборудование</h6>
-                    <p>It has survived not only five centuries, but also the leap into remaining.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 item">
-                <div class="text-center">
-                    <span class="icon pe-7s-box2"></span>
-                    <h6>Свой Торговый Знак</h6>
-                    <p>It has survived not only five centuries, but also the leap into remaining.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 item">
-                <div class="text-center">
-                    <span class="icon pe-7s-light"></span>
-                    <h6>Powerful & Simple</h6>
-                    <p>It has survived not only five centuries, but also the leap into remaining.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="banner section-padding bg-gray" data-scroll-index="2">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-5">
-                <div class="img mb-sm50">
-                    <img src="{{ asset('/img/v1.svg') }}" alt="">
-                </div>
-            </div>
-
-            <div class="offset-md-1 col-md-6 valign">
-                <div class="content">
-                    <span class="sm-title">Awesome Tools</span>
-                    <h3>We Provide Almost Every Kind Of Business Solution.</h3>
-                    <p>Fusce imperdiet justo vitae dui eleifend imperdiet sed ac massa. Eu scelerisque felis
-                        imperdiet proin fermentum. Odio pellentesque diam volutpat commodo sed.</p>
-                    <a href="#0" class="butn butn-bg">
-                        <span>View More <i class="pe-7s-angle-right"></i></span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="banner section-padding" data-scroll-index="2">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6 valign">
-                <div class="content mb-sm50">
-                    <span class="sm-title">Awesome Tools</span>
-                    <h3>We Provide Almost Every Kind Of Business Solution.</h3>
-                    <p>Fusce imperdiet justo vitae dui eleifend imperdiet sed ac massa. Eu scelerisque felis
-                        imperdiet proin fermentum. Odio pellentesque diam volutpat commodo sed.</p>
-                    <a href="#0" class="butn butn-bg">
-                        <span>View More <i class="pe-7s-angle-right"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="offset-md-1 col-md-5">
-                <div class="img">
-                    <img src="{{ asset('img/v3.svg') }}" alt="">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+@include('start_page.features')
+@include('start_page.equipment')
+@include('start_page.trademark')
 
 <section class="process">
     <div class="section-padding background bg-img parallaxie" data-overlay-dark="9" data-background="img/bg1.jpg">

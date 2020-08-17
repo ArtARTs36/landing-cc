@@ -184,6 +184,11 @@ class SettingsTableSeeder extends Seeder
         }
 
         $this->createSiteSetting('Ссылка на OZON', 'site.link_ozon', 'https://ozon.ru/');
+        $this->createSiteSetting(
+            'Ссылка на Торговый знак в ФИПС',
+            'site.link_trademark_fips',
+            'https://www1.fips.ru/fips_servl/fips_servlet?DB=RUTM&DocNumber=725774'
+        );
 
         $this->createSiteSetting('Контакты: email', 'site.contacts_email', 'apivek@mail.ru');
         $this->createSiteSetting('Контакты: телефон', 'site.contacts_phone', '+7 (920) 449 70-10');
