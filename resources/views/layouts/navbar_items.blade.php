@@ -2,7 +2,7 @@
     <a class="nav-link active" href="/">Главная</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="/">Оборудование</a>
+    <a class="nav-link" href="/equipment">Оборудование</a>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="/">Продукция</a>

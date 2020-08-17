@@ -17,6 +17,7 @@ class CreateGalleryAlbumsTable extends Migration
             $table->id();
             $table->timestamps();
 
+            $table->string('key');
             $table->string('name');
         });
     }

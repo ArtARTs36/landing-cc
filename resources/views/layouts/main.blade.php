@@ -8,7 +8,7 @@
     <meta name="description" content="FULA - Onepage Multi-Purpose HTML5 Template" />
     <meta name="author" content="" />
 
-    <title>Цветы Черноземья</title>
+    <title>@yield('page_title') - Цветы Черноземья</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:100,300,400,500,700,900&display=swap" rel="stylesheet">
