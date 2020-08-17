@@ -1,8 +1,8 @@
 <li class="nav-item">
-    <a class="nav-link active" href="/">Главная</a>
+    <a class="nav-link" href="/">Главная</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link" href="/equipment">Оборудование</a>
+    <a class="nav-link {{ is_current_route('equipment') ? 'active' : '' }}" href="/equipment">Оборудование</a>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="/">Продукция</a>
