@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Bundles\Product\Http\Controllers;
 
-use App\Http\Requests\SetProducts;
+use App\Bundles\Product\Http\Requests\SetProducts;
 use App\Models\Product;
-use App\Services\ProductService;
+use App\Bundles\Product\Services\ProductService;
 
 class ProductController
 {
@@ -14,13 +14,6 @@ class ProductController
     public function __construct(ProductService $service)
     {
         $this->service = $service;
-    }
-
-    public function home()
-    {
-        return view('products.home', [
-            'products' => Product::all(),
-        ]);
     }
 
     public function all()

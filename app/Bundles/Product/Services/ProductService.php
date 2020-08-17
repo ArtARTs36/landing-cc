@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Bundles\Product\Services;
 
 use App\Bundles\Product\Repositories\ProductRepository;
 use App\Models\Product;
@@ -24,6 +24,10 @@ class ProductService
         $this->repository = $repository;
     }
 
+    /**
+     * @param array $items
+     * @return Collection
+     */
     public function set(array $items)
     {
         Product::query()->truncate();
@@ -37,6 +41,9 @@ class ProductService
         return $products;
     }
 
+    /**
+     * @return Collection
+     */
     public function all(): Collection
     {
         return Cache::remember(static::CACHE_KEY_ALL, 3600 * 24 * 14, function () {
@@ -44,6 +51,9 @@ class ProductService
         });
     }
 
+    /**
+     * @return Collection
+     */
     public function top(): Collection
     {
         return Cache::remember(static::CACHE_KEY_TOP, 3600 * 24 * 14, function () {

@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Bundles\Gallery\Models\Album;
 use App\Bundles\Gallery\Services\ImageService;
-use App\Bundles\Product\Repositories\ProductRepository;
 use App\Models\ExternalAboutUsPost;
 use App\Models\Impression;
-use App\Services\ProductService;
+use App\Bundles\Product\Services\ProductService;
 use Illuminate\View\View;
 
 /**
