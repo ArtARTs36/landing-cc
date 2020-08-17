@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::prefix('products')->group(function () {
     Route::post('set', 'ProductController@set');
 });
 
 Route::prefix('form')->group(function () {
     Route::post('feedback', '\App\Email\Messages\FeedBack@send');
+});
+
+Route::prefix('events')->group(function () {
+    Route::post('subscribe', 'EventController@subscribe');
 });
