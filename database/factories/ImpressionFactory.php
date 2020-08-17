@@ -12,5 +12,6 @@ $factory->define(\App\Models\Impression::class, function (Faker $faker) {
         \App\Models\Impression::FIELD_AUTHOR_EMAIL => $faker->email,
         \App\Models\Impression::FIELD_IS_ACTIVE => true,
         \App\Models\Impression::FIELD_AUTHOR_POSITION => 'Сотрудник',
+        \App\Models\Impression::FIELD_AUTHOR_IP => $faker->ipv4,
     ];
 });

@@ -20,6 +20,7 @@ class CreateImpressionsTable extends Migration
             $table->string('author_full_name');
             $table->string('author_email');
             $table->string('author_position');
+            $table->string('author_ip', 20);
             $table->string('author_avatar')->nullable();
             $table->text('message');
             $table->boolean('is_active');

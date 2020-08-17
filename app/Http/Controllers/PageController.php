@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Bundles\Gallery\Models\Album;
 use App\Bundles\Gallery\Services\ImageService;
+use App\Bundles\Impression\Services\ImpressionService;
 use App\Models\ExternalAboutUsPost;
 use App\Models\Impression;
 use App\Bundles\Product\Services\ProductService;
@@ -21,15 +22,23 @@ final class PageController
     /** @var ProductService */
     private $productService;
 
+    /** @var ImpressionService */
+    private $impressionService;
+
     /**
      * PageController constructor.
      * @param ImageService $imageService
      * @param ProductService $productService
+     * @param ImpressionService $impressionService
      */
-    public function __construct(ImageService $imageService, ProductService $productService)
-    {
+    public function __construct(
+        ImageService $imageService,
+        ProductService $productService,
+        ImpressionService $impressionService
+    ) {
         $this->imageService = $imageService;
         $this->productService = $productService;
+        $this->impressionService = $impressionService;
     }
 
     /**
@@ -40,7 +49,7 @@ final class PageController
         return view('start', [
             'products' => $this->productService->top(),
             'externalPosts' => ExternalAboutUsPost::top(),
-            'impressions' => Impression::top(6),
+            'impressions' => $this->impressionService->top(),
         ]);
     }
 

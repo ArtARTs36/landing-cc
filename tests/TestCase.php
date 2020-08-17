@@ -8,7 +8,11 @@ abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
 
-    protected function url(string $url = null)
+    /**
+     * @param string|null $url
+     * @return string
+     */
+    protected function url(string $url = null): string
     {
         return static::BASE_URL . ($url ? '/'. $url : $url);
     }
