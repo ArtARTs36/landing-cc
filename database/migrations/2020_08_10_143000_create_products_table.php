@@ -19,10 +19,15 @@ class CreateProductsTable extends Migration
 
             $table->string('name');
             $table->float('price');
-            $table->integer('quantity');
-            $table->string('quantity_unit');
             $table->integer('size');
             $table->string('size_unit');
+            $table->unsignedBigInteger('image_id')->nullable();
+            $table->string('order_link');
+            $table->text('description')->nullable();
+
+            $table->foreign('image_id')
+                ->references('id')
+                ->on('gallery_images');
         });
     }
 

@@ -7,6 +7,7 @@ use App\Bundles\Gallery\Services\ImageService;
 use App\Models\ExternalAboutUsPost;
 use App\Models\Impression;
 use App\Services\ProductService;
+use Illuminate\View\View;
 
 final class PageController
 {
@@ -33,9 +34,15 @@ final class PageController
 
     public function equipment()
     {
-        // offset-lg-0 offset-md-3
         return view('pages.equipment', [
             'images' => $this->imageService->getViaCache(Album::KEY_EQUIPMENT),
+        ]);
+    }
+
+    public function products(): View
+    {
+        return view('products.page', [
+            'products' => app(ProductService::class)->top(),
         ]);
     }
 }
