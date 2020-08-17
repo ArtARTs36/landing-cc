@@ -260,7 +260,7 @@ function subscribeOnProductUpdate(email)
                 'Подписка успешно оформлена\n' +
                 '</div>').appendTo('body').modal();
         },
-        error: function (response) {
+        error: function () {
             $('<div id="subscribe-on-product-update-error" class="modal">\n' +
                 '<h5>Подписка на обновления продукции</h5> <br/>\n' +
                 '<div class="alert alert-danger" role="alert" style="">\n' +
