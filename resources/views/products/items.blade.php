@@ -17,8 +17,8 @@
                     </div>
                     <div class="cont">
                         <div class="info">
-                            <i class="pe-7s-user"></i> {{ $product->price }} <span>₽</span>
-                            <i class="pe-7s-ticket"></i> {{ $product->size }} {{ $product->size_unit }}
+                            <i class="pe-7s-wallet"></i> {{ $product->price }} <span>₽</span>
+                            <i class="pe-7s-filter"></i> {{ $product->size }} {{ $product->size_unit }}
                         </div>
 
                         <h5>{{ $product->name }}</h5>

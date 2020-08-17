@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Bundles\Gallery\Models\Image;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Class Product
@@ -25,6 +26,7 @@ class Product extends Model
     public const FIELD_SIZE_UNIT = 'size_unit';
     public const FIELD_ORDER_LINK = 'order_link';
     public const FIELD_DESCRIPTION = 'description';
+    public const RELATION_IMAGE = 'image';
 
     protected $fillable = [
         self::FIELD_NAME,
@@ -34,4 +36,12 @@ class Product extends Model
         self::FIELD_ORDER_LINK,
         self::FIELD_DESCRIPTION,
     ];
+
+    /**
+     * @return BelongsTo
+     */
+    public function image(): BelongsTo
+    {
+        return $this->belongsTo(Image::class);
+    }
 }
