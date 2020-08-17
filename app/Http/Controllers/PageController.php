@@ -58,7 +58,7 @@ final class PageController
      */
     public function contacts(): View
     {
-        return view('contacts');
+        return view('contacts.page');
     }
 
     /**
