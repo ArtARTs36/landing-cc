@@ -11,20 +11,11 @@ final class DummySeeder extends Seeder
 {
     public function run(): void
     {
-        $this->gallery();
-
+        $this->call(GalleryDummySeeder::class);
         $this->call(ImpressionSeeder::class);
         $this->call(ProductSeeder::class);
         $this->call(ExternalAboutUsPostSeeder::class);
         $this->call(EventSeeder::class);
-    }
-
-    private function gallery(): void
-    {
-        $album = Album::create('equipment', 'Оборудование');
-
-        $images = factory(Image::class, 15)->create();
-
-        $album->images()->attach($images);
+        $this->call(PageSeeder::class);
     }
 }

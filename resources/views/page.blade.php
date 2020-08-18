@@ -11,7 +11,7 @@
             <div class="row">
 
                 <div class="col-lg-12">
-                    <div class="posts blog mb-md50">
+                    <div class="posts blog mb-md50 page-{{ $page->slug }}">
 
                         <div class="item">
                             <div class="cont">
