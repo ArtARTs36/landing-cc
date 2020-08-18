@@ -32,7 +32,7 @@
 	15 Footer
 	16 Spacial Pages
 	17 Responsive
- 
+
 
 ---------------------------------------------------------------- */
 /* ----------------------------------------------------------------
@@ -2035,6 +2035,12 @@ span, a, a:hover {
   .blog .clients .brand {
     padding: 30px 60px 0;
   }
+}
+
+#home-about-block__facts span {
+  border-left: 1px solid #eee;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style-blue.css.map */
