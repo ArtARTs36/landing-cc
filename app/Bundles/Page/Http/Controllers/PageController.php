@@ -22,8 +22,15 @@ final class PageController extends Controller
             abort(404);
         }
 
-        return view('page', [
+        return view($this->getViewTemplate($page->slug), [
             'page' => $page,
         ]);
+    }
+
+    private function getViewTemplate(string $slug): string
+    {
+        $view = 'pages.' . $slug;
+
+        return view_exists($view) ? $view : 'page';
     }
 }

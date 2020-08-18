@@ -2051,4 +2051,12 @@ span, a, a:hover {
   border-radius: 4px;
 }
 
+.map-frame {
+  width: 100%;
+}
+
+.map-frame iframe {
+  width:100%;
+}
+
 /*# sourceMappingURL=style-blue.css.map */

@@ -33,8 +33,8 @@
                     <a href="/contacts" class="butn light mt-30">
                         <span>Контакты<i class="pe-7s-paper-plane"></i></span>
                     </a>
-                    <a href="#0" class="butn butn-rgba mt-30">
-                        <span>Watch Demo <i class="pe-7s-play"></i></span>
+                    <a href="{{ page_url('map') }}" class="butn butn-rgba mt-30">
+                        <span>Мы на карте <i class="pe-7s-map-marker"></i></span>
                     </a>
                 </div>
             </div>
@@ -47,62 +47,17 @@
 @include('start_page.about')
 @include('start_page.equipment')
 @include('start_page.trademark')
-@include('start_page.production_process')
+
+@if ($products->isNotEmpty())
 @include('start_page.products')
+@endif
+
 @include('start_page.impressions')
+@include('start_page.contacts')
 
-<div class="call-action text-center">
-    <div class="background bg-img  parallaxie pt-80 pb-80" data-background="{{ asset('img/bg2.jpg') }}" data-overlay-dark="8">
-        <div class="container">
-            <div class="row">
-                <div class="offset-lg-3 col-lg-6 offset-md-2 col-md-8">
-                    <div>
-                        <h3>Остались вопросы? Свяжитесь с нами</h3>
-                        <a href="/contacts" class="butn light mt-30">
-                            <span>Задать вопрос<i class="pe-7s-paper-plane"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="blog section-padding" data-scroll-index="7">
-    <div class="container">
-        <div class="row">
-
-            <div class="section-head text-center col-sm-12">
-                <h4>О нас говорят</h4>
-            </div>
-
-            @foreach($externalPosts as $post)
-            <div class="col-lg-4 col-md-6">
-                <div class="item mb-sm50">
-                    <div class="post-img">
-                        <div class="img">
-                            <img src="{{ $post->hasImage() ? $post->image_url : asset('img/plug.jpg') }}" alt="">
-                        </div>
-                    </div>
-
-                    <div class="cont">
-                        <div class="info">
-                            <a><i class="pe-7s-date"></i> {{ $post->published_at->format('Y-m-d') }}</a>
-                        </div>
-
-                        <h5><a href="{{ $post->link }}">{{ $post->title }}</a></h5>
-
-                        <a href="{{ $post->link }}" class="more">
-                            <span>Подробнее <i class="pe-7s-angle-right-circle"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-
-        </div>
-    </div>
-</section>
+@if ($externalPosts->isNotEmpty())
+@include('start_page.external_posts')
+@endif
 
 @include('layouts.footer')
 
