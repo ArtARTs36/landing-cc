@@ -24,7 +24,10 @@
 @include('layouts/navbar')
 
 <header class="header" data-scroll-index="0">
-    <div class="background valign bg-img parallaxie" data-overlay-dark="9">
+    <div class="background valign bg-img parallaxie"
+         data-background="{{ asset('img/start_bg.jpg') }}"
+         data-overlay-dark="4"
+    >
         <div class="container">
             <div class="row">
                 <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 text-center caption mt-80">
