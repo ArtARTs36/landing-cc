@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Impression;
 
+use App\Bundles\Impression\Events\ImpressionCreated;
 use App\Models\Impression;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -21,6 +22,8 @@ final class ImpressionTest extends TestCase
      */
     public function testStore(): void
     {
+        $this->expectsEvents(ImpressionCreated::class);
+
         $request = factory(Impression::class)->make()->toArray();
 
         $response = $this->postJson($this->url(), $request)->assertCreated()->decodeResponseJson();

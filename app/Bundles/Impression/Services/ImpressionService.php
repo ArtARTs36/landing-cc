@@ -3,6 +3,7 @@
 namespace App\Bundles\Impression\Services;
 
 use App\Bundles\Impression\Entities\Author;
+use App\Bundles\Impression\Events\ImpressionCreated;
 use App\Bundles\Impression\Repository\ImpressionRepository;
 use App\Models\Impression;
 use Illuminate\Support\Collection;
@@ -55,6 +56,10 @@ final class ImpressionService
      */
     public function create(Author $author, string $message): Impression
     {
-        return $this->repository->create($author, $message, false);
+        $impression = $this->repository->create($author, $message, false);
+
+        event(new ImpressionCreated($impression));
+
+        return $impression;
     }
 }

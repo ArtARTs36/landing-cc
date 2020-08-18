@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Bundles\Impression\Events\ImpressionCreated;
+use App\Bundles\Impression\Notifications\ImpressionNotification;
 use App\Events\FeedBackCreated;
 use App\Listeners\BreadDataChangedListener;
 use App\Notification\FeedBackNotification;
@@ -27,6 +29,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         FeedBackCreated::class => [
             FeedBackNotification::class,
+        ],
+        ImpressionCreated::class => [
+            ImpressionNotification::class,
         ],
     ];
 
