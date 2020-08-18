@@ -70,16 +70,16 @@
         },
         {
             "name": "artarts36/pushall-sender",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtARTs36/PushAllSender.git",
-                "reference": "a9fff6c96200943a5808b000139c12c7273f58a6"
+                "reference": "11e4d1fc92b17600468ee6ce7ed32918d761f75f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtARTs36/PushAllSender/zipball/a9fff6c96200943a5808b000139c12c7273f58a6",
-                "reference": "a9fff6c96200943a5808b000139c12c7273f58a6",
+                "url": "https://api.github.com/repos/ArtARTs36/PushAllSender/zipball/11e4d1fc92b17600468ee6ce7ed32918d761f75f",
+                "reference": "11e4d1fc92b17600468ee6ce7ed32918d761f75f",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
                 "symfony",
                 "yii"
             ],
-            "time": "2020-06-25T07:22:35+00:00"
+            "time": "2020-08-18T20:20:52+00:00"
         },
         {
             "name": "asm89/stack-cors",
