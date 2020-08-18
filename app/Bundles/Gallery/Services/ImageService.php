@@ -4,32 +4,39 @@ namespace App\Bundles\Gallery\Services;
 
 use App\Bundles\Gallery\Models\Album;
 use App\Bundles\Gallery\Models\Image;
+use App\Bundles\Gallery\Repositories\ImageRepository;
+use Illuminate\Support\Collection;
 
 class ImageService
 {
-    public function save(string $name, string $description = null): Image
-    {
-        $image = new Image();
-        $image->name = $name;
-        $image->description = $description;
-        $image->save();
+    private $repository;
 
-        return $image;
+    /**
+     * ImageService constructor.
+     * @param ImageRepository $repository
+     */
+    public function __construct(ImageRepository $repository)
+    {
+        $this->repository = $repository;
     }
 
-    public function getViaCache(string $albumKey)
+    /**
+     * @param string $albumKey
+     * @return Collection
+     */
+    public function getOfAlbumViaCache(string $albumKey): Collection
     {
         return $this->getOfAlbum($albumKey);
     }
 
-    public function getOfAlbum(string $albumKey)
+    /**
+     * @param string $albumKey
+     * @return Collection
+     */
+    public function getOfAlbum(string $albumKey): Collection
     {
         $albumId = Album::idByKeyViaCache($albumKey);
 
-        return Image::query()
-            ->whereHas(Image::RELATION_ALBUMS, function ($query) use ($albumId) {
-                $query->where('id', $albumId);
-            })
-            ->get();
+        return $this->repository->getOfAlbumById($albumId);
     }
 }

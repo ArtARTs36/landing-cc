@@ -4,6 +4,7 @@ namespace App\Bundles\Gallery\Repositories;
 
 use App\Abstracts\Repository;
 use App\Bundles\Gallery\Models\Image;
+use Illuminate\Support\Collection;
 
 /**
  * Class ImageRepository
@@ -21,17 +22,33 @@ class ImageRepository extends Repository
 
     /**
      * @param string $name
-    * @param string $path
+     * @param string $path
+     * @param int|null $position
      * @param string $description
      * @return Image
      */
-    public function create(string $name, string $path, string $description = null): Image
+    public function create(string $name, string $path, int $position = null, string $description = null): Image
     {
         return $this->newQuery()
             ->create([
                 Image::FIELD_NAME => $name,
                 Image::FIELD_PATH => $path,
+                Image::FIELD_POSITION => $position,
                 Image::FIELD_DESCRIPTION => $description,
             ]);
+    }
+
+    /**
+     * @param int $albumId
+     * @return Collection
+     */
+    public function getOfAlbumById(int $albumId): Collection
+    {
+        return Image::query()
+            ->latest(Image::FIELD_POSITION)
+            ->whereHas(Image::RELATION_ALBUMS, function ($query) use ($albumId) {
+                $query->where('id', $albumId);
+            })
+            ->get();
     }
 }

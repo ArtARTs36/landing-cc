@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property int $id
  * @property string $name
  * @property string $description
+ * @property int $position
  * @property string $path
  */
 final class Image extends Model
@@ -18,6 +19,7 @@ final class Image extends Model
     public const FIELD_NAME = 'name';
     public const FIELD_DESCRIPTION = 'description';
     public const FIELD_PATH = 'path';
+    public const FIELD_POSITION = 'position';
 
     public const RELATION_ALBUMS = 'albums';
 
@@ -28,6 +30,7 @@ final class Image extends Model
     protected $fillable = [
         self::FIELD_NAME,
         self::FIELD_DESCRIPTION,
+        self::FIELD_POSITION,
     ];
 
     /**

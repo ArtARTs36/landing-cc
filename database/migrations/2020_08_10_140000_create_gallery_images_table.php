@@ -19,6 +19,7 @@ class CreateGalleryImagesTable extends Migration
 
             $table->string('name');
             $table->text('description')->nullable();
+            $table->integer('position')->default(1);
             $table->string('path');
         });
     }

@@ -67,7 +67,7 @@ final class PageController
     public function equipment(): View
     {
         return view('pages.equipment', [
-            'images' => $this->imageService->getViaCache(Album::KEY_EQUIPMENT),
+            'images' => $this->imageService->getOfAlbumViaCache(Album::KEY_EQUIPMENT),
         ]);
     }
 
