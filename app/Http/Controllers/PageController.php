@@ -80,4 +80,14 @@ final class PageController
             'products' => $this->productService->all(),
         ]);
     }
+
+    /**
+     * @return View
+     */
+    public function awards(): View
+    {
+        return view('awards', [
+           'images' => $this->imageService->getOfAlbum(Album::KEY_AWARDS),
+        ]);
+    }
 }

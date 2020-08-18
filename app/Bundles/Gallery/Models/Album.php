@@ -19,6 +19,7 @@ final class Album extends Model
     public const FIELD_KEY = 'key';
 
     public const KEY_EQUIPMENT = 'equipment';
+    public const KEY_AWARDS = 'awards';
 
     protected $table = 'gallery_albums';
 
