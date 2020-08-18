@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ExternalAboutUsPostSeeder::class);
         $this->call(EventSeeder::class);
         $this->call(PageSeeder::class);
+        $this->call(GallerySeeder::class);
     }
 }
