@@ -21,6 +21,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.github.example', '.env');"
+
     - name: Validate composer.json
       run: composer validate
 
