@@ -13,7 +13,7 @@ final class DummySeeder extends Seeder
     {
         $this->call(GalleryDummySeeder::class);
         $this->call(ImpressionSeeder::class);
-        $this->call(ProductSeeder::class);
+        $this->call(ProductDummySeeder::class);
         $this->call(ExternalAboutUsPostSeeder::class);
         $this->call(EventSeeder::class);
         $this->call(PageSeeder::class);
