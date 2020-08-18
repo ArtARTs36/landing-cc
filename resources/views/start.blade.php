@@ -51,7 +51,7 @@
 @if ($products->isNotEmpty())
 @include('start_page.products')
 @endif
-
+@include('start_page.production_process')
 @include('start_page.impressions')
 @include('start_page.contacts')
 
