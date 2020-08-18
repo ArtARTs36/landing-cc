@@ -10,3 +10,6 @@
 <li class="nav-item">
     <a class="nav-link" href="#" data-scroll-nav="4">Отзывы</a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href="/awards">Награды</a>
+</li>

@@ -10,3 +10,6 @@
 <li class="nav-item">
     <a class="nav-link {{ is_current_route('impressions') ? 'active' : '' }}" href="/impressions">Отзывы</a>
 </li>
+<li class="nav-item">
+    <a class="nav-link {{ is_current_route('awards') ? 'active' : '' }}" href="/awards">Награды</a>
+</li>
