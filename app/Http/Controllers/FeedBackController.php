@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\FeedBackCreated;
 use App\Http\Requests\FeedBackRequest;
 use App\Http\Resource\FeedBackResource;
 use App\Models\FeedBack;
@@ -22,6 +23,8 @@ final class FeedBackController extends Controller
         $feedBack->fill($request->only($feedBack->getFillable()));
         $feedBack->author_ip = $request->ip();
         $feedBack->save();
+
+        event(new FeedBackCreated($feedBack));
 
         return new FeedBackResource($feedBack);
     }

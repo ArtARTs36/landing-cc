@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Events\FeedBackCreated;
 use App\Http\Requests\FeedBackRequest;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -14,6 +15,8 @@ final class FormTest extends TestCase
 
     public function testFeedBack(): void
     {
+        $this->expectsEvents(FeedBackCreated::class);
+
         $response = $this->postJson($this->url('feedback'), [
             FeedBackRequest::FIELD_MESSAGE => 'Test Message',
             FeedBackRequest::FIELD_SUBJECT => 'Test Subject',

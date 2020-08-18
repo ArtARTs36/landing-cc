@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\FeedBackCreated;
 use App\Listeners\BreadDataChangedListener;
+use App\Notification\FeedBackNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -22,6 +24,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         BreadDataChanged::class => [
             BreadDataChangedListener::class,
+        ],
+        FeedBackCreated::class => [
+            FeedBackNotification::class,
         ],
     ];
 

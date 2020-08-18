@@ -11,6 +11,8 @@
 |
 */
 
+use ArtARTs36\PushAllSender\Senders\PushAllSender;
+
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
@@ -39,6 +41,13 @@ $app->singleton(
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
+);
+
+$app->singleton(
+    \ArtARTs36\PushAllSender\Interfaces\PusherInterface::class,
+    function () {
+        return new PushAllSender(env('PUSHALL_CHANNEL_ID'), env('PUSHALL_API_KEY'));
+    }
 );
 
 /*

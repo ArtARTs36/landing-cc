@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4877197eadf8edd94f92e6bf7cb2e095",
+    "content-hash": "a68f61c87bf4eacd1a1da9bd1ba7a40a",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -67,6 +67,57 @@
                 "widgets"
             ],
             "time": "2019-03-25T14:20:55+00:00"
+        },
+        {
+            "name": "artarts36/pushall-sender",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ArtARTs36/PushAllSender.git",
+                "reference": "a9fff6c96200943a5808b000139c12c7273f58a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ArtARTs36/PushAllSender/zipball/a9fff6c96200943a5808b000139c12c7273f58a6",
+                "reference": "a9fff6c96200943a5808b000139c12c7273f58a6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArtARTs36\\PushAllSender\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ArtARTs36",
+                    "email": "temicska99@mail.ru"
+                }
+            ],
+            "description": "Push Sender",
+            "keywords": [
+                "api",
+                "laravel",
+                "mobile",
+                "notification",
+                "php",
+                "push",
+                "pushall.ru",
+                "symfony",
+                "yii"
+            ],
+            "time": "2020-06-25T07:22:35+00:00"
         },
         {
             "name": "asm89/stack-cors",
