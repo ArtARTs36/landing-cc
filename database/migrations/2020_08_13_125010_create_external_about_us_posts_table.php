@@ -19,6 +19,7 @@ class CreateExternalAboutUsPostsTable extends Migration
 
             $table->string('title');
             $table->string('link');
+            $table->string('image_url')->nullable();
 
             $table->date('published_at')->nullable();
         });
