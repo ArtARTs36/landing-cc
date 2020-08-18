@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 require __DIR__ . '/../app/Bundles/Gallery/Http/Routes/api.php';

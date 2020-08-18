@@ -16,8 +16,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        dump(mb_strlen('Термо-формовочная линия'));
-
         $response->assertStatus(200);
     }
 }

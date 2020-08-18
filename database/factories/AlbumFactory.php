@@ -8,5 +8,6 @@ use Faker\Generator as Faker;
 $factory->define(Album::class, function (Faker $faker) {
     return [
         Album::FIELD_NAME => $faker->word,
+        Album::FIELD_KEY => $faker->word,
     ];
 });
