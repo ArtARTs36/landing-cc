@@ -5,7 +5,7 @@
             <div class="col-lg-4 col-md-4">
                 <div class="item">
                     <a class="logo" href="#">
-                        <img src="{{ asset('/img/logo-dark.png') }}" alt="logo">
+                        <img src="{{ asset('/img/logo-dark.png') }}" alt="logo" class="cc-logo">
                     </a>
                     <p>{{ setting('site.footer_text') }}</p>
                     <div class="social">
