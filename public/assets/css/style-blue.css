@@ -2059,4 +2059,8 @@ span, a, a:hover {
   width:100%;
 }
 
+.cc-logo {
+  transform: scale(4.0);
+}
+
 /*# sourceMappingURL=style-blue.css.map */

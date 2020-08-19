@@ -1,7 +1,7 @@
 <nav class="navbar change navbar-expand-lg">
     <div class="container">
         <a class="logo" href="/">
-            <img src="{{ asset('/img/logo-light.png') }}" alt="logo">
+            <img src="{{ asset('/img/logo-light.png') }}" alt="logo" class="cc-logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
