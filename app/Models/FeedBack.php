@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Class FeedBack
  * @property int $id
- * @property string $author_name
+ * @property string $author_full_name
  * @property string|null $author_email
  * @property string $author_phone
  * @property string $author_ip

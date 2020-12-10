@@ -21,7 +21,7 @@ final class FeedBackRequest extends FormRequest
     public function rules(): array
     {
         return [
-            static::FIELD_AUTHOR_NAME => 'string|required',
+            static::FIELD_AUTHOR_NAME => 'string|required|min:3',
             static::FIELD_AUTHOR_EMAIL => 'sometimes|email',
             static::FIELD_SUBJECT => 'string|sometimes',
             static::FIELD_MESSAGE => 'string|required',

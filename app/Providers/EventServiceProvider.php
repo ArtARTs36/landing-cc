@@ -7,10 +7,10 @@ use App\Bundles\Impression\Notifications\ImpressionNotification;
 use App\Events\FeedBackCreated;
 use App\Listeners\BreadDataChangedListener;
 use App\Notification\FeedBackNotification;
+use App\Notification\SendToPanel;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 use TCG\Voyager\Events\BreadDataChanged;
 
 class EventServiceProvider extends ServiceProvider
@@ -29,6 +29,7 @@ class EventServiceProvider extends ServiceProvider
         ],
         FeedBackCreated::class => [
             FeedBackNotification::class,
+            SendToPanel::class,
         ],
         ImpressionCreated::class => [
             ImpressionNotification::class,
