@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Bundles\Gallery\Models\Album;
 use App\Bundles\Gallery\Services\ImageService;
 use App\Bundles\Impression\Services\ImpressionService;
+use App\Bundles\Page\Repositories\ExternalAboutUsPostRepository;
 use App\Models\ExternalAboutUsPost;
 use App\Bundles\Impression\Models\Impression;
 use App\Bundles\Product\Services\ProductService;
@@ -44,11 +45,11 @@ final class PageController
     /**
      * @return View
      */
-    public function start(): View
+    public function start(ExternalAboutUsPostRepository $aboutRepo): View
     {
         return view('start', [
             'products' => $this->productService->top(),
-            'externalPosts' => ExternalAboutUsPost::top(),
+            'externalPosts' => $aboutRepo->top(),
             'impressions' => $this->impressionService->top(),
         ]);
     }

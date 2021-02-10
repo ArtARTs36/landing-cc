@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Support\WithTop;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -14,8 +13,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ExternalAboutUsPost extends Model
 {
-    use WithTop;
-
     public const FIELD_TITLE = 'title';
     public const FIELD_LINK = 'link';
     public const FIELD_PUBLISHED_AT = 'published_at';
