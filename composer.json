@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
+        "ext-json": "*",
         "ext-mbstring": "*",
         "artarts36/pushall-sender": "^0.3.2",
         "fideloper/proxy": "^4.2",
@@ -16,8 +17,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "tcg/voyager": "^1.4",
-        "ext-json": "*"
+        "sentry/sentry-laravel": "^2.3",
+        "tcg/voyager": "^1.4"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
