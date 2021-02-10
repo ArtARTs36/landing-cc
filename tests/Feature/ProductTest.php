@@ -2,7 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\Http\Requests\SetProducts;
+use App\Bundles\Product\Http\Requests\SetProducts;
+use App\Bundles\Product\Services\ProductService;
 use App\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -24,13 +25,7 @@ class ProductTest extends TestCase
     {
         $products = factory(Product::class, 10)->make();
 
-        $request = [
-            SetProducts::FIELD_ITEMS => $products->toArray(),
-        ];
-
-        $response = $this->postJson($this->url('set'), $request)
-            ->assertOk()
-            ->decodeResponseJson();
+        $response = app(ProductService::class)->set($products->toArray());
 
         self::assertCount(10, $response);
         self::assertEquals(10, Product::query()->count());

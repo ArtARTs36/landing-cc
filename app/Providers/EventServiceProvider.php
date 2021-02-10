@@ -2,10 +2,16 @@
 
 namespace App\Providers;
 
+use App\Bundles\Impression\Events\ImpressionCreated;
+use App\Bundles\Impression\Notifications\ImpressionNotification;
+use App\Events\FeedBackCreated;
+use App\Listeners\BreadDataChangedListener;
+use App\Notification\FeedBackNotification;
+use App\Notification\SendToPanel;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
+use TCG\Voyager\Events\BreadDataChanged;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -17,6 +23,16 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        BreadDataChanged::class => [
+            BreadDataChangedListener::class,
+        ],
+        FeedBackCreated::class => [
+            FeedBackNotification::class,
+            SendToPanel::class,
+        ],
+        ImpressionCreated::class => [
+            ImpressionNotification::class,
         ],
     ];
 
