@@ -28,7 +28,9 @@
                         <li><a href="/contacts"><i class="pe-7s-angle-right-circle"></i> Обратная связь</a></li>
                         <li><a href="/equipment"><i class="pe-7s-angle-right-circle"></i> Оборудование</a></li>
                         <li><a href="/impressions"><i class="pe-7s-angle-right-circle"></i> Отзывы</a></li>
+                        @if (! empty(setting('site.link_ozon')))
                         <li><a href="{{ setting('site.link_ozon') }}"><i class="pe-7s-angle-right-circle"></i> Мы на OZON</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>

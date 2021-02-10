@@ -183,7 +183,7 @@ class SettingsTableSeeder extends Seeder
             ])->save();
         }
 
-        $this->createSiteSetting('Ссылка на OZON', 'site.link_ozon', 'https://ozon.ru/');
+        $this->createSiteSetting('Ссылка на OZON', 'site.link_ozon', '');
         $this->createSiteSetting(
             'Ссылка на Торговый знак в ФИПС',
             'site.link_trademark_fips',
