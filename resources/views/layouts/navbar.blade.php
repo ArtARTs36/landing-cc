@@ -11,11 +11,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                @if(\Illuminate\Support\Facades\Route::current()->uri() === '/')
-                    @include('layouts.navbar_items_with_scroll')
-                @else
-                    @include('layouts.navbar_items')
-                @endif
+                @include('layouts.navbar_items')
 
                 <li class="nav-item">
                     <a class="nav-link butn butn-bg" href="/contacts"><span>Контакты</span></a>

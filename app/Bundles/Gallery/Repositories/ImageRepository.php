@@ -24,10 +24,10 @@ class ImageRepository extends Repository
      * @param string $name
      * @param string $path
      * @param int|null $position
-     * @param string $description
+     * @param string|null $description
      * @return Image
      */
-    public function create(string $name, string $path, int $position = null, string $description = null): Image
+    public function create(string $name, string $path, int $position = null, ?string $description = null): Image
     {
         return $this->newQuery()
             ->create([
@@ -47,7 +47,7 @@ class ImageRepository extends Repository
         return Image::query()
             ->latest(Image::FIELD_POSITION)
             ->whereHas(Image::RELATION_ALBUMS, function ($query) use ($albumId) {
-                $query->where('id', $albumId);
+                $query->where(Image::FIELD_ID, $albumId);
             })
             ->get();
     }
