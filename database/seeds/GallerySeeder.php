@@ -1,6 +1,7 @@
 <?php
 
 use App\Bundles\Gallery\Models\Album;
+use App\Bundles\Gallery\Repositories\AlbumRepository;
 use App\Bundles\Gallery\Repositories\ImageRepository;
 use Illuminate\Database\Seeder;
 
@@ -17,7 +18,7 @@ final class GallerySeeder extends Seeder
 
     private function awards(): void
     {
-        $album = Album::create('awards', 'Награды');
+        $album = app(AlbumRepository::class)->create('awards', 'Награды');
 
         /** @var ImageRepository $repo */
         $repo = app(ImageRepository::class);
@@ -92,7 +93,7 @@ final class GallerySeeder extends Seeder
 
     private function equipment(): void
     {
-        $album = Album::create('equipment', 'Оборудование');
+        $album = app(AlbumRepository::class)->create('equipment', 'Оборудование');
 
         /** @var ImageRepository $repo */
         $repo = app(ImageRepository::class);

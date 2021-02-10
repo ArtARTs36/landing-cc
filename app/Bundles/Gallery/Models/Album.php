@@ -29,7 +29,7 @@ final class Album extends Model
     ];
 
     /**
-     * @return BelongsToMany
+     * @codeCoverageIgnore
      */
     public function images(): BelongsToMany
     {
@@ -39,32 +39,5 @@ final class Album extends Model
             'image_id',
             'album_id'
         );
-    }
-
-    public static function idByKeyViaCache(string $key)
-    {
-        return static::idByKey($key);
-    }
-
-    public static function idByKey(string $key): int
-    {
-        return static::query()
-            ->select(['id'])
-            ->where(static::FIELD_KEY, $key)
-            ->firstOrFail()
-            ->id;
-    }
-
-    /**
-     * @param string $key
-     * @param string $name
-     * @return Album
-     */
-    public static function create(string $key, string $name): Album
-    {
-        return static::query()->create([
-            Album::FIELD_KEY => $key,
-            Album::FIELD_NAME => $name,
-        ]);
     }
 }

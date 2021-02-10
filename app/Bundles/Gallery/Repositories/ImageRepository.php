@@ -2,6 +2,7 @@
 
 namespace App\Bundles\Gallery\Repositories;
 
+use App\Bundles\Gallery\Models\Album;
 use App\Contracts\Repository;
 use App\Bundles\Gallery\Models\Image;
 use Illuminate\Support\Collection;
@@ -42,12 +43,22 @@ class ImageRepository extends Repository
      * @param int $albumId
      * @return Collection
      */
-    public function getOfAlbumById(int $albumId): Collection
+    public function getByAlbumId(int $albumId): Collection
     {
         return Image::query()
             ->latest(Image::FIELD_POSITION)
             ->whereHas(Image::RELATION_ALBUMS, function ($query) use ($albumId) {
                 $query->where(Image::FIELD_ID, $albumId);
+            })
+            ->get();
+    }
+
+    public function getByAlbumKey(string $key): Collection
+    {
+        return Image::query()
+            ->latest(Image::FIELD_POSITION)
+            ->whereHas(Image::RELATION_ALBUMS, function ($query) use ($key) {
+                $query->where(Album::FIELD_KEY, $key);
             })
             ->get();
     }
