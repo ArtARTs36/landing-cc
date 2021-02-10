@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "artarts36/cvety-chernozemya",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Цветы Черноземья",
     "keywords": [
         "framework",
         "laravel"
