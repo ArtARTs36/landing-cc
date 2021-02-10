@@ -3,7 +3,7 @@
 namespace App\Bundles\Impression\Http\Requests;
 
 use App\Http\Requests\AuthorizedRequest;
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 
 /**
  * Class StoreImpression

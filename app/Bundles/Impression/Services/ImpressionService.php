@@ -5,7 +5,7 @@ namespace App\Bundles\Impression\Services;
 use App\Bundles\Impression\Entities\Author;
 use App\Bundles\Impression\Events\ImpressionCreated;
 use App\Bundles\Impression\Repository\ImpressionRepository;
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 

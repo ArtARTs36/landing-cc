@@ -3,7 +3,7 @@
 namespace Tests\Feature\Impression;
 
 use App\Bundles\Impression\Events\ImpressionCreated;
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 

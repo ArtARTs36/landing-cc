@@ -3,7 +3,7 @@
 namespace App\Bundles\Impression\Notifications;
 
 use App\Bundles\Impression\Events\ImpressionCreated;
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 use ArtARTs36\PushAllSender\Interfaces\PusherInterface;
 use ArtARTs36\PushAllSender\Push;
 

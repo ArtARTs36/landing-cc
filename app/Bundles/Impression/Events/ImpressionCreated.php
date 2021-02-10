@@ -2,7 +2,7 @@
 
 namespace App\Bundles\Impression\Events;
 
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 
 /**
  * Class ImpressionCreated

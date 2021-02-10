@@ -2,7 +2,7 @@
 
 namespace App\Bundles\Impression\Http\Resources;
 
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**

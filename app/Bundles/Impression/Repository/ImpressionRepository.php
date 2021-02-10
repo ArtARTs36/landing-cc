@@ -4,7 +4,7 @@ namespace App\Bundles\Impression\Repository;
 
 use App\Contracts\Repository;
 use App\Bundles\Impression\Entities\Author;
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 use Illuminate\Support\Collection;
 
 class ImpressionRepository extends Repository

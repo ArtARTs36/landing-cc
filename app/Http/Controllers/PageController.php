@@ -6,7 +6,7 @@ use App\Bundles\Gallery\Models\Album;
 use App\Bundles\Gallery\Services\ImageService;
 use App\Bundles\Impression\Services\ImpressionService;
 use App\Models\ExternalAboutUsPost;
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 use App\Bundles\Product\Services\ProductService;
 use Illuminate\View\View;
 

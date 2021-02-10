@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Impression;
+use App\Bundles\Impression\Models\Impression;
 use Illuminate\Database\Seeder;
 
 class ImpressionSeeder extends Seeder
