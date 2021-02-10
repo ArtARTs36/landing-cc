@@ -67,7 +67,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "lint" : [
+        "lint": [
             "./vendor/bin/phpcs --colors --report-summary --report-source --report-width=1080 --warning-severity=0 --standard=PSR2 --extensions=php app config routes"
         ],
         "test": [
