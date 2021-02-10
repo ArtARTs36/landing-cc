@@ -2,7 +2,7 @@
 
 namespace App\Bundles\Gallery\Repositories;
 
-use App\Abstracts\Repository;
+use App\Contracts\Repository;
 use App\Bundles\Gallery\Models\Image;
 use Illuminate\Support\Collection;
 

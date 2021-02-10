@@ -2,7 +2,7 @@
 
 namespace App\Bundles\Impression\Repository;
 
-use App\Abstracts\Repository;
+use App\Contracts\Repository;
 use App\Bundles\Impression\Entities\Author;
 use App\Models\Impression;
 use Illuminate\Support\Collection;

@@ -2,7 +2,7 @@
 
 namespace App\Bundles\Page\Repositories;
 
-use App\Abstracts\Repository;
+use App\Contracts\Repository;
 use TCG\Voyager\Models\Page;
 
 final class PageRepository extends Repository

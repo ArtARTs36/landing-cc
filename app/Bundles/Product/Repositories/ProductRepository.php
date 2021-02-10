@@ -2,7 +2,7 @@
 
 namespace App\Bundles\Product\Repositories;
 
-use App\Abstracts\Repository;
+use App\Contracts\Repository;
 use App\Models\Product;
 use Illuminate\Support\Collection;
 
