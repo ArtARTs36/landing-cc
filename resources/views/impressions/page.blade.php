@@ -15,9 +15,13 @@
                 </div>
 
                 <div class="col-lg-12">
+                    @if ($impressions->isEmpty())
+                        <div class="alert alert-warning" role="alert">
+                            На данный момент отзывы отсутствуют ;(
+                        </div>
+                    @endif
                     <div class="owl-carousel owl-theme text-center">
                         @foreach($impressions as $impression)
-
                             <div class="item">
                                 <div class="client-area">
                                     <p>{{ $impression->cut(50) }}</p>
