@@ -1,4 +1,4 @@
-source .env
+source $PWD/.env
 
 $PHP_EXECUTOR composer.phar install --no-dev --no-progress
 $PHP_EXECUTOR composer.phar dump-autoload --optimize
