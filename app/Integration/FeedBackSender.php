@@ -2,13 +2,14 @@
 
 namespace App\Integration;
 
+use App\Contracts\IntegrationClient;
 use App\Models\FeedBack;
 
 class FeedBackSender
 {
     protected $client;
 
-    public function __construct(Client $client)
+    public function __construct(IntegrationClient $client)
     {
         $this->client = $client;
     }

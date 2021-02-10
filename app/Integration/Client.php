@@ -2,9 +2,10 @@
 
 namespace App\Integration;
 
+use App\Contracts\IntegrationClient;
 use GuzzleHttp\ClientInterface;
 
-class Client
+class Client implements IntegrationClient
 {
     protected $guzzle;
 
