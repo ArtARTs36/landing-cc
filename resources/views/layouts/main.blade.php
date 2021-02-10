@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="keywords" content="Цветы, Черноземья, Воронеж, Мед, Пасека, Пчелы, Пчеловодство" />
     <meta name="description" content="Цветы Черноземья" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <title>@yield('page_title') - Цветы Черноземья</title>
 
