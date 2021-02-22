@@ -23,8 +23,12 @@
                     <span class="icon pe-7s-gift"></span>
                     <h6>Онлайн-Магазин</h6>
                     <p>
-                        Приобрести нашу продукцию можно в онлайн-магазине на платформе
-                        <a href="{{ setting('site.link_ozon') }}" style="color:#007bff">OZON</a>
+                        @if (! empty(setting('site.link_ozon')))
+                            Приобрести нашу продукцию можно в онлайн-магазине на платформе
+                            <a href="{{ setting('site.link_ozon') }}" style="color:#007bff">OZON</a>
+                        @else
+                            Приобрести нашу продукцию совсем скоро можно будет приобрести онлайн
+                        @endif
                     </p>
                 </div>
             </div>
