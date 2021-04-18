@@ -20,7 +20,7 @@ class FeedBackSender
             'people_title' => $feedBack->author_full_name,
             'people_email' => $feedBack->author_email,
             'people_phone' => $feedBack->author_phone,
-            'people_ip'    => $feedBack->author_ip,
+            'ip'    => $feedBack->author_ip,
             'message' => $this->prepareMessage($feedBack),
         ]);
     }
