@@ -14,8 +14,12 @@ class SendToPanel
         $this->sender = $sender;
     }
 
-    public function handle(FeedBackCreated $event)
+    public function handle(FeedBackCreated $event): void
     {
-        $this->sender->send($event->feedBack);
+        try {
+            $this->sender->send($event->feedBack);
+        } catch (\Throwable $e) {
+            report($e);
+        }
     }
 }
